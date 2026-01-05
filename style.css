@@ -1,0 +1,121 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #0f0f0f;
+  color: #eaeaea;
+  font-family: sans-serif;
+  margin: 0;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  font-size: 12px;
+  letter-spacing: 3px;
+  margin: 15px 0;
+}
+
+.main {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+/* CAMERA */
+.booth {
+  width: 260px;
+  height: 360px;
+  border: 2px solid #222;
+  overflow: hidden;
+}
+
+video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* SUBTLE LIVE FILTERS */
+video.none {
+  filter: none;
+}
+
+video.bw {
+  filter: grayscale(100%) contrast(110%) brightness(95%);
+}
+
+video.cool {
+  filter: grayscale(30%) contrast(105%) brightness(95%) saturate(80%);
+}
+
+video.warm {
+  filter: sepia(20%) contrast(105%) brightness(100%) saturate(90%);
+}
+
+/* STRIP */
+.strip {
+  width: 160px;
+  background: #000;
+  border: 2px solid #222;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.strip img {
+  width: 100%;
+}
+
+/* CONTROLS */
+.controls {
+  margin-top: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
+}
+
+button {
+  background: transparent;
+  color: #eaeaea;
+  border: 1px solid #444;
+  padding: 6px 10px;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.capture {
+  border-color: #b11226;
+  color: #b11226;
+}
+
+#downloadBtn:disabled {
+  opacity: 0.4;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+  .main {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .strip {
+    flex-direction: row;
+    width: 260px;
+    overflow-x: auto;
+  }
+
+  .strip img {
+    width: 60px;
+  }
+}
+
+canvas {
+  display: none;
+}

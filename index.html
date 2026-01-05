@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Midnight Photobooth</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>MIDNIGHT BOOTH</h1>
+
+<div class="main">
+  <div class="booth">
+    <video id="video" autoplay playsinline></video>
+  </div>
+
+  <div class="strip" id="strip"></div>
+</div>
+
+<div class="controls">
+  <button onclick="setFilter('none')">CLEAR</button>
+  <button onclick="setFilter('bw')">B&W</button>
+  <button onclick="setFilter('cool')">COOL</button>
+  <button onclick="setFilter('warm')">WARM</button>
+  <button class="capture" onclick="takePhoto()">TAKE</button>
+  <button id="downloadBtn" onclick="downloadStrip()" disabled>DOWNLOAD</button>
+</div>
+
+<canvas id="canvas"></canvas>
+
+<script src="script.js"></script>
+</body>
+</html>
