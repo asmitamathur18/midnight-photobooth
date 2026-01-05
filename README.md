@@ -63,3 +63,5 @@ photobooth/
 
 Built with plain HTML, CSS, and JavaScript.  
 No frameworks. No external dependencies.
+
+site live at : https://asmitamathur18.github.io/midnight-photobooth/
